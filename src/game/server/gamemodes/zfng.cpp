@@ -190,7 +190,7 @@ void CGameControllerZFNG::Tick()
 						char aBuf[64];
 						str_format(
 							aBuf, sizeof aBuf,
-							"Starting infection in %d seconds", Seconds
+							"%d 秒后开始感染", Seconds
 						);
 						m_Broadcaster.SetBroadcast(-1, aBuf, TICK_SPEED * 1);
 					}
@@ -216,7 +216,7 @@ void CGameControllerZFNG::Tick()
 								char aBuf[64];
 								str_format(
 									aBuf, sizeof aBuf,
-									"Nuke spawns in %d minutes", Minutes
+									"%d 分钟后出现核弹", Minutes
 								);
 								m_Broadcaster.SetBroadcast(
 									-1, aBuf, TICK_SPEED * 1
@@ -224,7 +224,7 @@ void CGameControllerZFNG::Tick()
 								break;
 							case 1:
 								m_Broadcaster.SetBroadcast(
-									-1, "Nuke spawns in 1 minute", TICK_SPEED * 1
+									-1, "1分钟后出现核弹", TICK_SPEED * 1
 								);
 								break;
 						}
@@ -238,7 +238,7 @@ void CGameControllerZFNG::Tick()
 								char aBuf[64];
 								str_format(
 									aBuf, sizeof aBuf,
-									"Nuke spawns in %d minutes, 30 seconds", Minutes
+									"%d 秒/分钟后出现核弹, 30 秒", Minutes
 								);
 								m_Broadcaster.SetBroadcast(
 									-1, aBuf, TICK_SPEED * 1
@@ -246,7 +246,7 @@ void CGameControllerZFNG::Tick()
 								break;
 							case 1:
 								m_Broadcaster.SetBroadcast(
-									-1, "Nuke spawns in 1 minute, 30 seconds", TICK_SPEED * 1
+									-1, "核弹出现在 1 分钟后, 30秒", TICK_SPEED * 1
 								);
 								break;
 						}
@@ -261,7 +261,7 @@ void CGameControllerZFNG::Tick()
 								char aBuf[64];
 								str_format(
 									aBuf, sizeof aBuf,
-									"Nuke spawns in %d seconds", Seconds
+									"%d 秒后出现核弹", Seconds
 								);
 								m_Broadcaster.SetBroadcast(
 									-1, aBuf, TICK_SPEED * 1
@@ -495,7 +495,7 @@ void CGameControllerZFNG::DoFlagCapture()
 
 	str_format(
 		aBuf, sizeof(aBuf),
-		"'%s' detonated the nuke (%d.%s%d seconds)",
+		"'%s' 引爆了核弹 (%d.%s%d 秒)",
 		Server()->ClientName(carrierCid),
 		(int)CaptureTime % 60,
 		((int)(CaptureTime * 100) % 100) < 10 ? "0" : "",
@@ -784,7 +784,7 @@ void CGameControllerZFNG::AnnounceWinners()
 	} else {
 		str_format(
 			aBuf, sizeof(aBuf),
-			"%d humans survived", m_NumHumans
+			"%d个人类幸存", m_NumHumans
 		);
 	}
 	GameServer()->SendChat(-1, CGameContext::CHAT_ALL, aBuf);
