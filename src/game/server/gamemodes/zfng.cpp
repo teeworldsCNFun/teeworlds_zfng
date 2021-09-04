@@ -558,12 +558,12 @@ void CGameControllerZFNG::DoWincheck()
 	) {
 		if (m_NumHumans == 0) {
 			// Zombies win
-			dbg_msg("zfng", "Humans win");
+			dbg_msg("zfng", "僵尸胜利!");
 			EndRound();
 			return;
 		} else if (m_NumInfected == 0) {
 			// Humans win
-			dbg_msg("zfng", "Humans win");
+			dbg_msg("zfng", "人类胜利!");
 			SetGameState(IGS_FINISHING_OFF_ZOMBIES);
 			return;
 		}
