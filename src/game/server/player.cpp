@@ -383,21 +383,21 @@ void CPlayer::SetTeam(int Team, bool DoChatMsg, bool Respawn)
 				case TEAM_HUMAN:
 					str_format(
 						aBuf, sizeof(aBuf),
-						"'%s' was revived",
+						"'%s' 被复活了",
 						Server()->ClientName(m_ClientID)
 					);
 					break;
 				case TEAM_INFECTED:
 					str_format(
 						aBuf, sizeof(aBuf),
-						"'%s' was infected",
+						"'%s' 被感染了",
 						Server()->ClientName(m_ClientID)
 					);
 					break;
 				case TEAM_SPECTATORS:
 					str_format(
 						aBuf, sizeof(aBuf),
-						"'%s' joined the spectators",
+						"'%s' 加入旁观",
 						Server()->ClientName(m_ClientID)
 					);
 					break;
@@ -405,7 +405,7 @@ void CPlayer::SetTeam(int Team, bool DoChatMsg, bool Respawn)
 		} else {
 			str_format(
 				aBuf, sizeof(aBuf),
-				"'%s' joined the %s",
+				"'%s' 加入 %s",
 				Server()->ClientName(m_ClientID),
 				GameServer()->m_pController->GetTeamName(Team)
 			);

@@ -653,7 +653,7 @@ void CGameContext::OnClientEnter(int ClientID)
 					str_format(
 						aBuf,
 						sizeof(aBuf),
-						"'%s' entered as a zombie",
+						"'%s' 以僵尸身份加入游戏",
 						Server()->ClientName(ClientID)
 					);
 					break;
@@ -661,7 +661,7 @@ void CGameContext::OnClientEnter(int ClientID)
 					str_format(
 						aBuf,
 						sizeof(aBuf),
-						"'%s' entered as a human",
+						"'%s' 以人类身份加入游戏",
 						Server()->ClientName(ClientID)
 					);
 					break;
@@ -669,7 +669,7 @@ void CGameContext::OnClientEnter(int ClientID)
 					str_format(
 						aBuf,
 						sizeof(aBuf),
-						"'%s' entered and joined the spectators",
+						"'%s' 进入游戏并加入旁观",
 						Server()->ClientName(ClientID)
 					);
 					break;
@@ -678,7 +678,7 @@ void CGameContext::OnClientEnter(int ClientID)
 			str_format(
 				aBuf,
 				sizeof(aBuf),
-				"'%s' entered and joined the %s",
+				"'%s' 进入游戏并加入 %s",
 				Server()->ClientName(ClientID),
 				m_pController->GetTeamName(m_apPlayers[ClientID]->GetTeam())
 			);

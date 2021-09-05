@@ -778,9 +778,9 @@ void CGameControllerZFNG::AnnounceWinners()
 {
 	char aBuf[64];
 	if (m_NumHumans == 0) {
-		str_format(aBuf, sizeof(aBuf), "No humans survived");
+		str_format(aBuf, sizeof(aBuf), "没有人类幸存");
 	} else if (m_NumHumans == 1) {
-		str_format(aBuf, sizeof(aBuf), "1 human survived");
+		str_format(aBuf, sizeof(aBuf), "一个人类幸存");
 	} else {
 		str_format(
 			aBuf, sizeof(aBuf),
@@ -934,23 +934,23 @@ void CGameControllerZFNG::ExplainWaitingNuke()
 		GameServer()->SendChat(
 			-1,
 			NukeDetonatorTeam(), // TEAM_INFECTED
-			"• Infect as many humans as you can before the nuke spawns!"
+			"• 在核武器出现前感染所有人类!"
 		);
 		GameServer()->SendChat(
 			-1,
 			NukeStandTeam(), // TEAM_HUMAN
-			"• Defend your base until the nuke spawns!"
+			"• 在核武器出现前守住你的阵地!"
 		);
 	} else {
 		GameServer()->SendChat(
 			-1,
 			NukeDetonatorTeam(), // TEAM_HUMAN
-			"• Survive until the nuke spawns!"
+			"• 在核武器出现前幸存下来!"
 		);
 		GameServer()->SendChat(
 			-1,
 			NukeStandTeam(), // TEAM_INFECTED
-			"• Infect as many humans as you can before the nuke spawns!"
+			"• 在核武器出现前守住你的阵地!"
 		);
 	}
 }
@@ -961,23 +961,23 @@ void CGameControllerZFNG::ExplainNukeSpawned()
 		GameServer()->SendChat(
 			-1,
 			NukeDetonatorTeam(), // TEAM_INFECTED
-			"• Don't let the humans plant the nuke in your base!"
+			"• 不要让人类在你的阵地上安置核武器!"
 		);
 		GameServer()->SendChat(
 			-1,
 			NukeStandTeam(), // TEAM_HUMAN
-			"• Plant the nuke in the zombie base to win!"
+			"• 在僵尸阵地上安置核武器以消灭他们!"
 		);
 	} else {
 		GameServer()->SendChat(
 			-1,
 			NukeDetonatorTeam(), // TEAM_HUMAN
-			"• Capture the nuke from the zombies to win!"
+			"• 从僵尸处获得核武器以胜利!"
 		);
 		GameServer()->SendChat(
 			-1,
 			NukeStandTeam(), // TEAM_INFECTED
-			"• Don't let the humans capture the nuke!"
+			"• 不要让核武器落到人类手中!"
 		);
 	}
 }
