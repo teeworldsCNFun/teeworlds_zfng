@@ -642,6 +642,7 @@ void CGameControllerZFNG::OnCharacterSpawn(class CCharacter *pChr)
 	// give default weapons
 	pChr->GiveWeapon(WEAPON_HAMMER, -1);
 	pChr->GiveWeapon(WEAPON_RIFLE, -1);
+	pChr->GiveWeapon(WEAPON_GRENADE, -1);
 }
 
 int CGameControllerZFNG::OnCharacterDeath(
